@@ -1,0 +1,27 @@
+{
+  "name": "neon-drive",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Neon Drive: a synthwave 5x3, 243-ways slot game built with PixiJS. Play money only.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "sim": "tsx scripts/simulate.ts",
+    "analyze": "tsx scripts/build-config.ts"
+  },
+  "dependencies": {
+    "pixi-filters": "^6.1.5",
+    "pixi.js": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}
