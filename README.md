@@ -2,6 +2,8 @@
 
 A synthwave slot game built with PixiJS and TypeScript. **Play money only.**
 
+Play it: https://neon-drive-green.vercel.app (add `?demo=bonus` or `?demo=bigwin` to make the first spin a real free-spins round or big win).
+
 - 5 reels × 3 rows, 243 ways (adjacent reels from the left, wilds on reels 2–4)
 - Free spins: 3 / 4 / 5 scatters award 8 / 12 / 20 spins; the multiplier climbs by 1 after every winning free spin; 3 scatters in the bonus add 5 spins
 - Round wins capped at 5,000× the bet

@@ -155,7 +155,7 @@ export class Game {
     this.refreshHud();
     this.winReadout.set(0);
     this.layout();
-    this.message.text = 'Tap spin or press Space to play';
+    this.message.text = this.coarse ? 'Tap spin to play' : 'Click spin or press Space to play';
   }
 
   private async symbolImages(): Promise<Record<string, string>> {
