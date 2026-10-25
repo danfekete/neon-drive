@@ -3,8 +3,8 @@ import { Game } from './game/game';
 import config from './math/neon-drive.json';
 import type { GameConfig } from './math/types';
 
-/** Measured by `npm run sim` over 60 million rounds. */
-const RTP_LABEL = '96.15%';
+/** Measured by `npm run sim` over 100 million rounds. */
+const RTP_LABEL = '98%';
 
 async function loadFonts(): Promise<void> {
   const faces = ['400 20px Kanit', '600 40px Kanit', '800 12px Kanit', 'italic 900 50px Kanit', '900 50px Kanit', '80px Monoton'];

@@ -10,13 +10,19 @@ Play it: https://neon-drive-green.vercel.app (add `?demo=bonus` or `?demo=bigwin
 
 ## Math
 
-| Metric | Target | Simulated (60M rounds) |
+Version 2 is tuned to win more often: friends found v1 too quiet (only 1 spin in 7.5 paid back the bet).
+
+| Metric | v1 | v2 (current, 100M rounds) |
 |---|---|---|
-| RTP | 96% | 96.15% ± 0.23% |
-| Base game / free spins | ~64% / ~32% | 64.8% / 31.4% |
-| Hit frequency | ~25% | 24.5% |
-| Bonus frequency | ~1 in 150 | 1 in 159 |
-| Std dev per spin | medium-high | 9.2× bet |
+| RTP | 96.15% | 97.96% ± 0.10% |
+| Base game / free spins | 64.8% / 31.4% | 68.2% / 29.8% |
+| Any win | 1 in 4.1 (24.5%) | 1 in 2.4 (42.1%) |
+| Win of at least 1x bet | 1 in 7.5 | 1 in 4.4 |
+| Bonus frequency | 1 in 159 | 1 in 97 |
+| Std dev per spin | 9.2x bet | 5.2x bet |
+| Busts within 200 spins (100-bet start) | 15% | 1% |
+
+`npm run sim` checks the return; `npx tsx scripts/feel.ts` reports how the game feels (win frequency, dry spells, typical sessions).
 
 The math engine (`src/math`) is pure TypeScript with no rendering code: config + bet + RNG in, complete round out. The game and the simulator use the same engine, so the numbers above describe the game you play.
 

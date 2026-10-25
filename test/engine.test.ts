@@ -206,9 +206,9 @@ describe('shipped math', () => {
     const cc = compileConfig(shipped as GameConfig);
     const exact = exactStats(cc, cc.base);
     const trigger = exact.scatterDist.slice(3).reduce((a, b) => a + b, 0);
-    expect(exact.hitRate).toBeGreaterThan(0.22);
-    expect(exact.hitRate).toBeLessThan(0.28);
-    expect(1 / trigger).toBeGreaterThan(130);
-    expect(1 / trigger).toBeLessThan(180);
+    expect(exact.hitRate).toBeGreaterThan(0.38);
+    expect(exact.hitRate).toBeLessThan(0.46);
+    expect(1 / trigger).toBeGreaterThan(85);
+    expect(1 / trigger).toBeLessThan(115);
   });
 });

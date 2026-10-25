@@ -102,15 +102,15 @@ function report(t: Tally, seconds: number): void {
 
   console.log(`\nNeon Drive simulation: ${t.spins.toLocaleString('en')} rounds in ${seconds.toFixed(1)}s\n`);
   line('Metric', 'Result', 'Target');
-  line('RTP', `${pct(rtp, 3)} ± ${pct(ci, 3)}`, '96%');
-  line('  base game', pct(t.baseWon / t.wagered), '~64%');
+  line('RTP', `${pct(rtp, 3)} ± ${pct(ci, 3)}`, '98%');
+  line('  base game', pct(t.baseWon / t.wagered), '~70%');
   line('    of which scatter', pct(t.scatterWon / t.wagered));
-  line('  free spins', pct(t.bonusWon / t.wagered), '~32%');
-  line('Hit frequency', pct(t.hits / t.spins), '~25%');
-  line('Bonus frequency', oneIn(t.bonuses / t.spins), '~1 in 150');
+  line('  free spins', pct(t.bonusWon / t.wagered), '~28%');
+  line('Hit frequency', pct(t.hits / t.spins), '~40%');
+  line('Bonus frequency', oneIn(t.bonuses / t.spins), '~1 in 100');
   line('Avg free spins/bonus', (t.freeSpins / Math.max(1, t.bonuses)).toFixed(2));
   line('Avg bonus win', `${(t.bonusWon / Math.max(1, t.bonuses) / config.betLevels[0]).toFixed(1)}x bet`);
-  line('Std dev per spin', `${sd.toFixed(2)}x bet`, 'medium-high (~8-15)');
+  line('Std dev per spin', `${sd.toFixed(2)}x bet`, 'medium (~4-7)');
   line('Max win seen', `${t.maxWinX.toLocaleString('en')}x`, 'cap 5,000x');
   line('Capped rounds', `${t.capped} (${oneIn(t.capped / t.spins)})`);
 

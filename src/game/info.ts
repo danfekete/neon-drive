@@ -42,7 +42,7 @@ export function createInfoScreen(cfg: GameConfig, images: Record<string, string>
         <h2>243 ways</h2>
         <p>Matching symbols on neighbouring reels, starting from the left, pay. Every combination of positions counts: 2 matches on reel 1 and 2 on reel 2 is 4 ways. Wins on different symbols add up.</p>
         <h2>The fine print</h2>
-        <p>A round can win at most ${fmt(cfg.maxWinX)}× your bet. Return to player is ${rtp}, measured over 60 million simulated rounds. Neon Drive uses play credits only: they have no cash value and can't be bought or cashed out.</p>
+        <p>A round can win at most ${fmt(cfg.maxWinX)}× your bet. Return to player is ${rtp}, measured over 100 million simulated rounds. Neon Drive uses play credits only: they have no cash value and can't be bought or cashed out.</p>
         <p class="keys">Keyboard: Space or Enter spins and stops, the arrow keys change your bet, I opens this screen, Escape closes it.</p>
       </div>`;
     root.querySelector<HTMLButtonElement>('.close')!.addEventListener('click', close);
